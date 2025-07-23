@@ -8,22 +8,28 @@ Kullanıcı dostu ve sevimli bir alışveriş deneyimi sunmak amacıyla gelişti
 ## 🚀 Özellikler
 
 - 🐱 **Kategori bazlı ürün listeleme** (Kedi/Köpek ürünleri)
-- 🛒 **Sepet yönetimi** (Ürün ekleme & sepeti görüntüleme)
-- 🧾 **Sipariş oluşturma ve yönetimi**
-- 🔐 **Kullanıcı kayıt/giriş sistemi** (Spring Security ile)
 - 🌸 **Thymeleaf ile dinamik sayfa oluşturma**
-- 🧱 **Spring Boot tabanlı MVC mimarisi**
+- 🌸 **Spring Boot tabanlı MVC mimarisi**
 - 📄 **HTML + CSS ile frontend tasarım**
-- 📚 **Blog ve bilgilendirici içerik sayfaları**
+- 📗 **Blog ve bilgilendirici içerik sayfaları**
 
 ---
 
-## 🧩 Planlanan Özellikler
+## 🔧 Geliştirme Aşamasındaki Özellikler
+
+- 🛒 **Sepet yönetimi** (Ürün ekleme & sepeti görüntüleme)
+- 📦 **Sipariş oluşturma ve yönetimi**
+- 🔐 **Kullanıcı kayıt/giriş sistemi** (Spring Security ile)
+
+---
+
+## 🧠 Planlanan Özellikler
 
 - 🔍 Ürün arama ve filtreleme
 - ⭐ Ürün değerlendirme ve yorum ekleme
-- 📦 Sipariş durumu takip modülü
+- 🚚 Sipariş durumu takip modülü
 - 📧 E-posta ile sipariş ve bildirim desteği
+
 
 ---
 
