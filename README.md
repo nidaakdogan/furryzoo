@@ -55,7 +55,6 @@ Kullanıcı dostu ve sevimli bir alışveriş deneyimi sunmak amacıyla gelişti
     - `service/` → İş mantığı (business logic) sınıfları
     - `entity/` → JPA Entity (veritabanı modeli) sınıfları
     - `repository/` → Spring Data JPA repository arayüzleri
-    - `views/` → (Varsa) özel view sınıfları
 - `src/main/resources/`
   - `templates/` → HTML şablonları (Thymeleaf)
   - `static/` → Statik dosyalar (CSS, JS, görseller)
