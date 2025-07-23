@@ -1,45 +1,44 @@
-# My App
+# Furryzoo 🐾
 
-This project can be used as a starting point to create your own Vaadin application with Spring Boot.
-It contains all the necessary configuration and some placeholder files to get you started.
+**Furryzoo**, evcil hayvanlara özel ürünlerin (mama, oyuncak, aksesuar vb.) sunulduğu kullanıcı dostu bir e-ticaret platformu prototipidir.  
+Spring Boot ve Thymeleaf kullanılarak geliştirilmiş bu proje, hem arka uç (backend) hem de ön uç (frontend) bileşenlerini içermektedir.
 
-## Running the application
+---
 
-The project is a standard Maven project. To run it from the command line,
-type `mvnw` (Windows), or `./mvnw` (Mac & Linux), then open
-http://localhost:8080 in your browser.
+## 🚀 Özellikler
 
-You can also import the project to your IDE of choice as you would with any
-Maven project. Read more on [how to import Vaadin projects to different IDEs](https://vaadin.com/docs/latest/guide/step-by-step/importing) (Eclipse, IntelliJ IDEA, NetBeans, and VS Code).
+- 🐶 Ürün kategorilerine göre listeleme (kedi/köpek ürünleri)
+- 🛒 Sepete ürün ekleme ve görüntüleme
+- 🧾 Sipariş yönetimi
+- 🔐 Kullanıcı kayıt/giriş sistemi
+- 📦 Spring Boot tabanlı MVC mimarisi
+- 🎨 Thymeleaf ile dinamik sayfa oluşturma
 
-## Deploying to Production
+---
 
-To create a production build, call `mvnw clean package -Pproduction` (Windows),
-or `./mvnw clean package -Pproduction` (Mac & Linux).
-This will build a JAR file with all the dependencies and front-end resources,
-ready to be deployed. The file can be found in the `target` folder after the build completes.
+## ⚙️ Kullanılan Teknolojiler
 
-Once the JAR file is built, you can run it using
-`java -jar target/my-app-1.0-SNAPSHOT.jar`
+| Katman | Teknoloji |
+|--------|-----------|
+| Backend | Java, Spring Boot |
+| Frontend | HTML, CSS, Thymeleaf |
+| Build Tool | Maven |
+| Versiyon Kontrol | Git & GitHub |
 
-## Project structure
+---
 
-- `MainLayout.java` in `src/main/java` contains the navigation setup (i.e., the
-  side/top bar and the main menu). This setup uses
-  [App Layout](https://vaadin.com/docs/components/app-layout).
-- `views` package in `src/main/java` contains the server-side Java views of your application.
-- `views` folder in `src/main/frontend` contains the client-side JavaScript views of your application.
-- `themes` folder in `src/main/frontend` contains the custom CSS styles.
+## 📂 Proje Yapısı
 
-## Useful links
+- `src/main/java/` → Java controller, service ve repository sınıfları
+- `src/main/resources/templates/` → HTML şablonları
+- `src/main/resources/static/` → Stil dosyaları ve görseller
+- `pom.xml` → Bağımlılık ve proje konfigürasyonu
 
-- Read the documentation at [vaadin.com/docs](https://vaadin.com/docs).
-- Follow the tutorial at [vaadin.com/docs/latest/tutorial/overview](https://vaadin.com/docs/latest/tutorial/overview).
-- Create new projects at [start.vaadin.com](https://start.vaadin.com/).
-- Search UI components and their usage examples at [vaadin.com/docs/latest/components](https://vaadin.com/docs/latest/components).
-- View use case applications that demonstrate Vaadin capabilities at [vaadin.com/examples-and-demos](https://vaadin.com/examples-and-demos).
-- Build any UI without custom CSS by discovering Vaadin's set of [CSS utility classes](https://vaadin.com/docs/styling/lumo/utility-classes). 
-- Find a collection of solutions to common use cases at [cookbook.vaadin.com](https://cookbook.vaadin.com/).
-- Find add-ons at [vaadin.com/directory](https://vaadin.com/directory).
-- Ask questions on [Stack Overflow](https://stackoverflow.com/questions/tagged/vaadin) or join our [Discord channel](https://discord.gg/MYFq5RTbBn).
-- Report issues, create pull requests in [GitHub](https://github.com/vaadin).
+---
+
+## 🔧 Uygulamayı Çalıştırma
+
+Terminalden şu komut ile başlatabilirsiniz:
+
+```bash
+./mvnw spring-boot:run
