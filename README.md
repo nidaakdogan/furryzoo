@@ -64,7 +64,7 @@ Kullanıcı dostu ve sevimli bir alışveriş deneyimi sunmak amacıyla gelişti
 
   ## ▶️ Uygulamayı Başlatma
 
-Projenizi çalıştırmak için terminalde aşağıdaki komutları sırasıyla çalıştırın:
+Projeyi çalıştırmak için terminalde aşağıdaki komutları sırasıyla çalıştırın:
 
 ```bash
 cd my-app && mvn spring-boot:run
