@@ -47,8 +47,6 @@ Kullanıcı dostu ve sevimli bir alışveriş deneyimi sunmak amacıyla gelişti
 
 ---
 
-## 🗂️ Proje Yapısı (Kısaca)
-
 ## 📁 Proje Yapısı
 
 - `src/main/java/`
