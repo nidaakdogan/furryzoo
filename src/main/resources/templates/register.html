@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Kayıt Ol</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .register-box {
+            max-width: 480px;
+            margin: 48px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 16px #eee;
+            padding: 32px 28px 24px 28px;
+        }
+        .btn-green {
+            background: #35736e;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 8px;
+            border: none;
+        }
+        .btn-green:hover {
+            background: #285a53;
+            color: #fff;
+        }
+        .btn-outline {
+            background: #fff;
+            border: 2px solid #35736e;
+            color: #35736e;
+            font-weight: 600;
+            border-radius: 8px;
+            width: 100%;
+            margin-top: 12px;
+            transition: background 0.2s, color 0.2s;
+        }
+        .btn-outline:hover {
+            background: #eaf8fa;
+            color: #285a53;
+        }
+        .form-control:focus {
+            border-color: #35736e;
+            box-shadow: 0 0 0 0.2rem #35736e22;
+        }
+        .register-link {
+            color: #35736e;
+            text-decoration: underline;
+            font-size: 1rem;
+            transition: color 0.2s;
+        }
+        .register-link:hover {
+            color: #285a53;
+        }
+        .eye-icon {
+            position: absolute;
+            right: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: #aaa;
+        }
+        .form-check-input:checked {
+            background-color: #35736e;
+            border-color: #35736e;
+        }
+        .form-check-input:focus {
+            box-shadow: 0 0 0 0.2rem #35736e33;
+        }
+        .form-check-label a {
+            color: #35736e;
+            font-weight: 600;
+        }
+        .form-check-label a:hover {
+            color: #f26522;
+        }
+    </style>
+</head>
+<body class="bg-light">
+<div class="register-box">
+    <h3 class="text-center mb-4">Furryzoo'ya Katıl</h3>
+    <form>
+        <div class="row mb-3">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Adınız *" required>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="Soyadınız *" required>
+            </div>
+        </div>
+        <div class="mb-3">
+            <input type="email" class="form-control" placeholder="E-posta adresiniz *" required>
+        </div>
+        <div class="mb-3 position-relative">
+            <input type="password" class="form-control" placeholder="Şifre belirleyin *" id="registerPassword" required>
+            <span class="eye-icon" onclick="toggleRegisterPassword()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#222" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/></svg>
+            </span>
+        </div>
+        <div class="mb-3">
+            <input type="tel" class="form-control" placeholder="Telefon (zorunlu değil)">
+        </div>
+        <div class="mb-3">
+            <select class="form-select" required>
+                <option value="" selected disabled>Evcil dostunuzun türü?</option>
+                <option>Kedi</option>
+                <option>Köpek</option>
+                <option>Kuş</option>
+                <option>Balık</option>
+                <option>Kemirgen</option>
+                <option>Diğer</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Evcil dostunuzun adı (isteğe bağlı)">
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Cinsi (isteğe bağlı)">
+        </div>
+        <div class="form-check mb-2">
+            <input class="form-check-input" type="checkbox" id="kampanya" value="1">
+            <label class="form-check-label" for="kampanya">
+                Kampanyalardan haberdar olmak istiyorum.
+            </label>
+        </div>
+        <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox" id="sozlesme" value="1" required>
+            <label class="form-check-label" for="sozlesme">
+                <a href="#" target="_blank">Üyelik sözleşmesini</a> ve <a href="#" target="_blank">KVKK Aydınlatma Metnini</a> okudum, kabul ediyorum.
+            </label>
+        </div>
+        <button type="submit" class="btn btn-green w-100 mb-2">Kayıt Ol</button>
+    </form>
+</div>
+<script>
+function toggleRegisterPassword() {
+  var input = document.getElementById('registerPassword');
+  if (input.type === 'password') {
+    input.type = 'text';
+  } else {
+    input.type = 'password';
+  }
+}
+</script>
+</body>
+</html> 

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Sepetim</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .cart-box {
+            max-width: 600px;
+            margin: 48px auto;
+            background: #fff;
+            border-radius: 16px;
+            box-shadow: 0 2px 16px #eee;
+            padding: 32px 28px 24px 28px;
+        }
+        .cart-title {
+            color: #35736e;
+            font-weight: 700;
+            font-size: 2rem;
+            margin-bottom: 24px;
+        }
+        .cart-item-row {
+            border-bottom: 1px solid #eaf8fa;
+            padding: 12px 0;
+        }
+        .cart-item-name {
+            font-weight: 600;
+            color: #35736e;
+        }
+        .cart-item-qty {
+            color: #555;
+            font-size: 1.1rem;
+        }
+        .cart-total {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #35736e;
+            margin-top: 18px;
+        }
+        .btn-green {
+            background: #35736e;
+            color: #fff;
+            font-weight: 600;
+            border-radius: 8px;
+            border: none;
+        }
+        .btn-green:hover {
+            background: #285a53;
+            color: #fff;
+        }
+    </style>
+</head>
+<body class="bg-light">
+<div class="cart-box">
+    <div class="cart-title text-center">Sepetim</div>
+    
+    <!-- Gerçek sepet verileri -->
+    <div th:if="${cart != null && !#lists.isEmpty(cart.items)}">
+        <div th:each="item : ${cart.items}" class="cart-item-row d-flex justify-content-between align-items-center">
+            <div>
+                <span class="cart-item-name" th:text="${item.product.name}"></span>
+                <span class="cart-item-qty">x <span th:text="${item.quantity}"></span></span>
+            </div>
+            <div class="cart-item-qty" th:text="${#numbers.formatDecimal(item.product.price * item.quantity, 2, 'POINT', 2, 'POINT')} + ' TL'"></div>
+        </div>
+        <div class="cart-total text-end">
+            Toplam: <span th:text="${#numbers.formatDecimal(cart.items.stream().mapToDouble(i -> i.product.price * i.quantity).sum(), 2, 'POINT', 2, 'POINT')} + ' TL'"></span>
+        </div>
+        <div class="text-end mt-3">
+            <button class="btn btn-green px-4">Siparişi Tamamla</button>
+        </div>
+    </div>
+    
+    <!-- Boş sepet mesajı -->
+    <div th:if="${cart == null || #lists.isEmpty(cart.items)}" class="text-center py-5">
+        <p class="fs-5 mb-4">Sepetinizde ürün bulunmamaktadır.</p>
+        <a href="/" class="btn btn-green px-4 py-2">Alışverişe Devam Et</a>
+    </div>
+</div>
+</body>
+</html> 

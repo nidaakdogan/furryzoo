@@ -1,23 +1,22 @@
 package com.example.application;
 
-import com.vaadin.flow.component.page.AppShellConfigurator;
-import com.vaadin.flow.theme.Theme;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import java.awt.Desktop;
+import java.net.URI;
 
-/**
- * The entry point of the Spring Boot application.
- *
- * Use the @PWA annotation make the application installable on phones, tablets
- * and some desktop browsers.
- *
- */
 @SpringBootApplication
-@Theme(value = "my-app")
-public class Application implements AppShellConfigurator {
+public class Application {
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
-    }
-
+        try {
+            // Uygulama başlatıldıktan sonra ana sayfayı aç
+            if (Desktop.isDesktopSupported()) {
+                Desktop.getDesktop().browse(new URI("http://localhost:9090"));
+            }
+        } catch (Exception e) {
+            System.out.println("Tarayıcı otomatik açılamadı: " + e.getMessage());
+        }
+}
 }

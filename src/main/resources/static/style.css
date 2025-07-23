@@ -1,0 +1,85 @@
+:root {
+  --primary: #FFB347;
+  --accent: #A3D8F4;
+  --background: #F7F7F7;
+  --text: #333333;
+  --success: #7ED957;
+  --warning: #FFD700;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: 'Quicksand', 'Baloo', 'Nunito', Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+  color: var(--primary);
+  font-family: 'Quicksand', 'Baloo', 'Nunito', Arial, sans-serif;
+}
+
+.btn-primary, .btn-success {
+  background: var(--primary) !important;
+  border: none !important;
+}
+
+.btn-outline-success {
+  color: var(--success) !important;
+  border-color: var(--success) !important;
+}
+
+.btn-outline-success:hover {
+  background: var(--success) !important;
+  color: #fff !important;
+}
+
+.btn-outline-warning {
+  color: var(--warning) !important;
+  border-color: var(--warning) !important;
+}
+
+.btn-outline-warning:hover {
+  background: var(--warning) !important;
+  color: #fff !important;
+}
+
+.table-dark th {
+  background: var(--primary) !important;
+  color: #fff !important;
+}
+
+.card-title {
+  color: var(--accent);
+}
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap'); 
+
+.maskot-box {
+    background: #fff;
+    border-radius: 36px;
+    box-shadow: 0 8px 32px #d2f1f7cc;
+    margin-top: 32px;
+    padding: 48px 24px 40px 24px;
+    min-height: 520px;
+    border: 1.5px solid #eaf8fa;
+    opacity: 0;
+    animation: maskot-fadein 1.2s ease 0.2s forwards;
+}
+@keyframes maskot-fadein {
+    from { opacity: 0; transform: translateY(40px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+.maskot-img {
+    max-height: 650px;
+    width: auto;
+    transition: none;
+}
+.maskot-img:hover {
+    transform: none;
+}
+@media (max-width: 768px) {
+    .maskot-img {
+        max-height: 320px;
+    }
+} 
